@@ -1,0 +1,556 @@
+/*----------------------------------------------------------*/
+/*---------Common CSS Styles--------------------------------*/
+/*----------------------------------------------------------*/
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin:0;
+    padding:0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: 400;
+}
+
+.sectionheading{
+    font-size: 5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 10rem;
+    border-bottom: 0.3rem solid #333;
+    text-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*----------------------------------------------------------*/
+/* --------------End of Common CSS Styles------------------ */
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+/*------------Navigation Bar--------------------------------*/
+/*----------------------------------------------------------*/
+.navgiationbar{
+    width: 100%;
+    height: 4rem;
+    background-color: #669cfa;
+    box-shadow: .2rem .2rem .5rem #555;
+    position: absolute;
+    z-index: 300;
+}
+
+.navigationsticky{
+    position: fixed;
+    top:0;
+}
+
+.navbarlink{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 3rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: color .2s;
+}
+
+.highlight.navbarlink{
+    color:#fff;
+}
+
+.navbarlink:hover{
+    color: white;
+}
+
+.navbarlink::before{
+    content: "";
+    width: 0;
+    height: .2rem;
+    background-color: white;
+    position: absolute;
+    right: -15%;
+    bottom: -.3rem;
+    transition: width 0.2s;
+}
+
+.highlight.navbarlink::before{
+    width: 130%;
+}
+
+.navbarlink:hover::before{
+    width: 130%;
+}
+/*----------------------------------------------------------*/
+/*------------End of Navigation Bar-------------------------*/
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+/*------------Section 1 - Landing Page----------------------*/
+/*----------------------------------------------------------*/
+.section1{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(255,255,255,2),
+    rgba(255,255,255,.3)),url(../images/background.jpg)
+    center no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.section1heading{
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    background-color:#669cfa;
+    padding: 0 3rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    border-bottom: 0.3rem solid white;
+    text-shadow: 0.2rem 0.2rem 1rem #555;
+    transform: skew(-15deg);
+}
+
+.personimg{
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .7rem dotted #669cfa;
+    background-color: rgba(255,255,255,0.7);
+    padding: 0.5rem;
+    opacity: 0.9;
+    margin-bottom: 5rem;
+}
+
+.personname{
+    font-size: 2rem;
+    color: white;
+    background-color: #669cfa;
+    margin: 5rem 0;
+    padding: .5rem 3rem;
+    letter-spacing: 0.3rem;
+    transform: skew(-15deg);
+}
+.personproject{
+    font-size:  1.7rem;
+    font-weight: 700;
+    color: #333;
+    background-color: white;
+    border: .3rem dotted #669cfa;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3m;
+}
+
+.personproject:hover{
+    background-color:  #669cfa;
+    color: #fff;
+    border: .3rem dotted #fff;
+}
+/*----------------------------------------------------------*/
+/*------------End of Section 1------------------------------*/
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+/*------------Section 2 - About Page------------------------*/
+/*----------------------------------------------------------*/
+.section2{
+    width: 100%;
+    height: 100%;
+    padding: 15rem 0 10rem 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2heading {
+    margin-bottom: 5rem;
+  }
+
+
+.progressbarswrapper{
+    margin-bottom: 5rem; 
+}
+
+.progressbar{
+    width: 60rem;
+    height: 3rem;
+    background-color: #ccc;
+    margin: 1.5rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 1rem #555;
+    border: .3rem dotted #669cfa;
+    position: relative;
+}
+
+.progresstext{
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.progresstext span{
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.progresspercent{
+    width: 0;
+    height: 100%;
+    background-color: #669cfa;
+    border-radius: 0.3rem;
+    transition: width 0.5s 0.5s ease-in-out;
+}
+
+.strengthwrapper{
+   width: 100%;
+   height: 30vh;
+   display: flex;
+   justify-content:space-evenly;
+   align-items:center;
+}
+
+.strength{
+    text-align: center;
+}
+
+.strength:first-child,
+.strength:last-child{
+    align-self: flex-start;
+}
+
+.strength i{
+    font-size: 10rem;
+    color: gray;
+    margin-bottom: 2rem;
+    border: .7rem dotted #669cfa;
+    text-shadow: .1rem .1rem .5rem #555
+}
+
+.strength h2{
+    font-size: 2rem;
+    color: #fff;
+    background-color: #777;
+    width: 25rem;
+    letter-spacing: .3rem;
+    transform: skew(-15deg);
+    border: .3rem dotted #669cfa;
+    box-shadow: .2rem .2rem .5rem #555;
+}
+/*----------------------------------------------------------*/
+/*------------End of Section 2------------------------------*/
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+/*------------Section 3 - Projects--------------------------*/
+/*----------------------------------------------------------*/
+.section3{
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0;
+    background-color: #eef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectswrapper{
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: #fff;
+    box-shadow: .3rem .3rem .5rem #777;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+}
+
+.project:hover{
+    box-shadow: 1rem 1rem 1rem rgb(211, 198, 25);
+}
+
+.projectext{
+    text-align: center;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    top: -10rem;
+    z-index: 10;
+    transition: top 0.3s;
+}
+
+.project:hover .projectext{
+   top: 5rem;
+   transition: top 0.3s 0.3s;
+}
+
+.projectname{
+    font-size: 3rem;
+    font-weight: 700;
+    background-color: #fff;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.projecttech{
+    font-size: 1.8rem;
+    background-color: rgb(214, 207, 207);
+    font-weight: 500;
+    color: #669cfa;
+    border: .7rem dotted #fff;
+}
+
+.projectimg{
+    width: 40rem;
+    transition: opacity 0.3s;
+}
+
+.project:hover.projectimg{
+   opacity: 0.2;
+}
+
+.projectlink{
+    font-size: 2rem;
+    font-weight: 400;
+    color: gray;
+    letter-spacing: 0.1rem;
+    border: .3rem solid #669cfa;
+    padding: 0 1rem;
+    background-color: #fff;
+    position: absolute;
+    bottom: -5rem;
+    transition: bottom .3s;
+    text-decoration: underline;
+}
+
+.project:hover .projectlink{
+    bottom: 5rem;
+    transition: bottom 0.3s 0.3s;
+ }
+/*----------------------------------------------------------*/
+/*------------End of Section 3------------------------------*/
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+/*------------Section 4 - Contact Me------------------------*/
+/*----------------------------------------------------------*/
+.section4{
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(189, 187, 187);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section4heading{
+    color: #fff;
+    box-shadow: none;
+    border-color: #fff;
+    margin-bottom: 5rem;
+}
+
+.contactform{
+    width: 50rem;
+    flex-direction: column;
+}
+
+.contactform input,
+.contactform textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: white;
+    font-size: 1.5rem;
+    border: .2rem solid #669cfa;
+    color: #555;
+}
+
+.contactform textarea{
+    height: 10rem;
+    max-height: 15rem;
+    max-width: 100%;
+}
+
+.contactform .contactformbtn{
+    background: #fff;
+    color: #1b1c1e;
+ 
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color:  #669cfa;
+    color: #fff;
+}
+/*----------------------------------------------------------*/
+/*------------End of Section 4------------------------------*/
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+/*------------Footer----------------------------------------*/
+/*----------------------------------------------------------*/
+.footer{
+    width: 100%;
+    height: 20vh;
+    background-color: black;
+    flex-direction: column;
+}
+/* learn from https://bbbootstrap.com/snippets/social-media-icons-footer-54412302 */
+.socialmedias{
+    margin-bottom: 2rem;
+}
+
+.socialmedialink{
+    margin: 0 2rem;
+    padding: .7rem;
+    background-color:  #777;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+.socialmedialink:hover {
+    background: #669cfa;
+}
+
+.socialmedialink i{
+    font-size: 3rem;
+    color: #fff;
+} 
+
+.copyright{
+    color: #aaa;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    font-weight: 400;
+    text-align: center;
+}
+/*----------------------------------------------------------*/
+/*------------End of Footer---------------------------------*/
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+/*------------Responsive------------------------------------*/
+/*----------------------------------------------------------*/
+/* Use @meida to apply different styles for different screen widths */
+/* refer to https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* Large devices (laptops/desktops, 768-1200px) */
+@media(max-width: 1200px){
+    .section1heading{
+        font-size: 3rem;
+    }
+    .strengthwrapper{
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .strength{
+        margin:3rem 2rem;
+    }
+
+    .section4{
+        height: 80vh;
+    }
+    .socialmedias{
+        margin-bottom: 0rem;
+    }
+}
+/* Medium devices (landscape tablets, 600-768px) */
+@media(max-width: 768px) {
+    .section1heading{
+        font-size: 2rem;
+    }
+
+    .progressbar{
+        width: 50rem;
+    }
+    .socialmedias{
+        margin-bottom: 0rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 500-600px) */
+@media(max-width: 600px) {
+    .section1heading{
+        font-size: 2rem;
+    }
+
+    .navbarlink{
+        margin: 0 2rem;
+        font-size: 1.5rem;
+    }
+
+    .section2heading{
+        margin-bottom: 10rem;
+    }
+
+    .progressbar{
+        width: 40rem;
+    }
+
+    .projectimg{
+        width: 100%;
+    }
+
+    .contactform{
+        width: 40rem;
+    }
+
+    .copyright{
+        width: 70%;
+    }
+
+    .socialmedias{
+        margin-bottom: 0rem;
+    }
+}
+/* Extra Small devices (phones, 450-500px) */
+@media(max-width: 500px){
+    html{
+        font-size: 55%;
+    }
+}
+/* Extra Small devices (phones, 450px and down) */
+@media(max-width: 450px){
+    html{
+        font-size: 45%;
+    }
+    .section1heading{
+        font-size: 1.5rem;
+    }
+    .navbarlink{
+        margin: 0 1.5rem;
+    }
+    .section2heading{
+        text-align: center;
+    }
+    .progressbar{
+        width: 40rem;
+    }
+}
+/*----------------------------------------------------------*/
+/*------------End of Responsive-----------------------------*/
+/*----------------------------------------------------------*/
